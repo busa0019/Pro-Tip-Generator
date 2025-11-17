@@ -36,59 +36,62 @@ npm start
 
 You should see: 🚀 Mantra server running on http://localhost:3001
 
-Launch the Frontend
+3. **Launch the Frontend
 
 Open index.html in your web browser
 
 Or use a local server: python -m http.server 8000 then visit http://localhost:8000
 
-Usage
+4. **Usage
 Welcome Screen: Click "Create Your Mantra" to begin
 
 Fill the Form:
 
-Your Name/Nickname
+- Your Name/Nickname
 
-The biggest lesson you learned during your studies
+- The biggest lesson you learned during your studies
 
-Your biggest professional fear
+- Your biggest professional fear
 
-Get Your Mantra: Click "Generate My Professional Mantra"
+- Get Your Mantra: Click "Generate My Professional Mantra"
 
-Receive: A personalized professional insight and career mantra
+- Receive: A personalized professional insight and career mantra
 
-🛠 Technical Details
-Frontend Stack
-HTML5: Semantic structure
 
-CSS3: Modern styling with CSS variables and animations
+5.  **🛠 Technical Details
 
-JavaScript: ES6+ with async/await for API calls
+**Frontend Stack
+- HTML5: Semantic structure
 
-Responsive Design: Mobile-first approach
+- CSS3: Modern styling with CSS variables and animations
 
-Backend Stack
-Node.js: Runtime environment
+- JavaScript: ES6+ with async/await for API calls
 
-Express.js: Web server framework
+- Responsive Design: Mobile-first approach
 
-CORS: Cross-origin resource sharing
+**Backend Stack
+- Node.js: Runtime environment
 
-Hugging Face API: Free AI model integration (fallback supported)
+- Express.js: Web server framework
 
-How It Works
-Input Processing: User inputs are intelligently processed for natural language flow
+- CORS: Cross-origin resource sharing
 
-AI Integration: Attempts to use Hugging Face's free GPT-2 model
+- Hugging Face API: Free AI model integration (fallback supported)
 
-Smart Fallback: If AI fails, uses sophisticated template system
 
-Mantra Generation: Creates professional insights and career mantras
+**How It Works
+- Input Processing: User inputs are intelligently processed for natural language flow
 
-Beautiful Display: Presents results with smooth animations
+- AI Integration: Attempts to use Hugging Face's free GPT-2 model
+
+- Smart Fallback: If AI fails, uses sophisticated template system
+
+- Mantra Generation: Creates professional insights and career mantras
+
+- Beautiful Display: Presents results with smooth animations
 
 📁 Project Structure
-text
+
 project/
 ├── index.html              # Main application page
 ├── style.css               # All styling and animations
@@ -97,7 +100,8 @@ project/
     ├── server.js           # Express server with API routes
     ├── package.json        # Node.js dependencies
     └── node_modules/       # Installed dependencies
-🔧 API Endpoints
+
+** 🔧 API Endpoints
 POST /api/generate-mantra
 Generates a personalized mantra based on user input.
 
@@ -116,62 +120,67 @@ json
   "proTip": "string with HTML formatting",
   "mantra": "string with HTML formatting"
 }
+
 GET /health
 Health check endpoint to verify server is running.
 
-🌈 Color Scheme
-Primary: #5e72e4 (Professional Blue)
 
-Secondary: #2dce89 (Success Green)
+**🌈 Color Scheme
+- Primary: #5e72e4 (Professional Blue)
 
-Accent: #fb6340 (Energetic Orange)
+- Secondary: #2dce89 (Success Green)
 
-Background: #f8f9fe (Light Gray)
+- Accent: #fb6340 (Energetic Orange)
 
-Text: #32325d (Dark Blue)
+- Background: #f8f9fe (Light Gray)
 
-💡 How the Mantra System Works
-Template Processing
+- Text: #32325d (Dark Blue)
+
+
+** 💡 How the Mantra System Works
+
+** Template Processing
 The application uses intelligent input processing:
 
-Lessons: Transforms common phrases like "Google is my friend" into professional concepts
+- Lessons: Transforms common phrases like "Google is my friend" into professional concepts
 
-Fears: Converts specific worries like "debugging" into broader challenges
+- Fears: Converts specific worries like "debugging" into broader challenges
 
-Grammar: Ensures natural sentence flow with proper articles and phrasing
+- Grammar: Ensures natural sentence flow with proper articles and phrasing
 
-Example Transformations
-"google is my friend" → "resourcefulness in finding solutions"
+** Example Transformations
+- "google is my friend" → "resourcefulness in finding solutions"
 
-"debugging" → "complex debugging challenges"
+- "debugging" → "complex debugging challenges"
 
-"not good enough" → "moments of self-doubt"
+- "not good enough" → "moments of self-doubt"
 
-🐛 Troubleshooting
-Common Issues
-Backend not starting
 
-Check Node.js is installed: node --version
+**🐛 Troubleshooting
+** Common Issues
+- Backend not starting
 
-Verify dependencies: cd mantra-backend && npm install
+ Check Node.js is installed: node --version
 
-CORS errors in browser
+- Verify dependencies: cd mantra-backend && npm install
 
-Ensure backend is running on port 3001
+- CORS errors in browser
 
-Check frontend is making requests to http://localhost:3001
+- Ensure backend is running on port 3001
 
-Hugging Face API errors
+- Check frontend is making requests to http://localhost:3001
+
+- Hugging Face API errors
 
 This is normal! The system automatically uses the template fallback
 
 Template system is reliable and always works
 
-Form not submitting
+- Form not submitting
 
 Ensure both "lesson" and "fear" fields are filled
 
-Check browser console for error messages
+- Check browser console for error messages
 
 Error Messages Explained
 Hugging Face API error: 404/410 - Free model unavailable, using template system (expected behavior)
@@ -180,34 +189,37 @@ API error: 429 - Rate limiting, using template system (expected behavior)
 
 Lesson and fear are required - User didn't fill all required fields
 
-🚀 Deployment
-Local Development
-Backend: cd mantra-backend && npm start
 
-Frontend: Open index.html or use local server
+**🚀 Deployment
+**Local Development
+- Backend: cd mantra-backend && npm start
 
-Production Deployment
-Frontend: Deploy static files to any web host (Netlify, Vercel, GitHub Pages)
+- Frontend: Open index.html or use local server
 
-Backend: Deploy to Heroku, Railway, or any Node.js hosting service
+**Production Deployment
+- Frontend: Deploy static files to any web host (Netlify, Vercel, GitHub Pages)
 
-Update API_URL in script.js to point to your deployed backend
+- Backend: Deploy to Heroku, Railway, or any Node.js hosting service
+
+- Update API_URL in script.js to point to your deployed backend
+
 
 📝 License
-This project is open source and available under the MIT License.
+This project is open source.
 
-🤝 Contributing
-Feel free to submit issues and enhancement requests!
 
-🎯 Future Enhancements
-Export mantras as images for sharing
+🤝 **Contributing
+- Feel free to submit issues and enhancement requests!
 
-Save favorite mantras
+🎯 **Future Enhancements
+- Export mantras as images for sharing
 
-Multiple language support
+- Save favorite mantras
 
-More template variations
+- Multiple language support
 
-User accounts for saving history
+- More template variations
+
+- User accounts for saving history
 
 Built with ❤️ for developers and designers starting their professional journey!
