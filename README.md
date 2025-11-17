@@ -135,8 +135,7 @@ Returns a simple server health check.
 - Update `API_URL` in `script.js` to point to your deployed backend endpoint
 
 ## 📝 License
-This project is open source. Add a LICENSE file (e.g., MIT) to make licensing explicit.
-
+This project is open source. 
 ## 🤝 Contributing
 Contributions are welcome! Please:
 1. Open an issue for significant changes or features
