@@ -1,10 +1,13 @@
 # Developer & Designer Graduation Mantra Generator
+<<<<<<< HEAD
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![License](https://img.shields.io/badge/license-open--source-blue)
 ![Contributions
 Welcome](https://img.shields.io/badge/contributions-welcome-purple)
 
+=======
+>>>>>>> 7ed9d406a4c1c4c0fa52b1e2fbc29131d9bc74ec
 A beautiful web application that generates personalized professional
 mantras for developers and designers beginning their careers.
 
