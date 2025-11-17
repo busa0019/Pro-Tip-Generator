@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Developer & Designer Graduation Mantra Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+        
+    
+</head>
+<body>
+
+    <div id="welcome-screen">
+        <h1>Designers & Developers 🚀</h1>
+        <p>
+            You've honed your skills through countless hours of coding, designing, debugging, and creating. 
+            Now you're stepping into the professional world, a new frontier of challenges and opportunities.
+        </p>
+        <p>
+            Before you embark on this exciting journey, let's create a personalized mantra that captures 
+            your unique experience and prepares you for what's ahead.
+        </p>
+        <button class="continue-btn">Create Your Mantra</button>
+    </div>
+
+    <div class="main-content">
+        <div class="container" id="main-form-container">
+            <header>
+                <h1>Your Developer/Designer Mantra Generator</h1>
+                <p class="subtitle">Share your journey insights and receive a personalized mantra to guide you in your professional career.</p>
+            </header>
+
+            <form id="tip-generator-form">
+                <div class="input-group">
+                    <label for="name">Your Name or Handle</label>
+                    <input type="text" id="name" required placeholder="e.g., CodeNinja, PixelPerfect, DevExplorer">
+                </div>
+
+                <div class="input-group">
+                    <label for="lesson">What's the most valuable lesson you've learned during your training?</label>
+                    <input type="text" id="lesson" required placeholder="e.g., Always test on multiple devices, Google is my best friend">
+                </div>
+
+                <div class="input-group">
+                    <label for="fear">What's your biggest concern about entering the professional tech world?</label>
+                    <input type="text" id="fear" required placeholder="e.g., Imposter syndrome, Keeping up with new frameworks">
+                </div>
+
+                <button type="submit" id="submit-btn">Generate My Professional Mantra</button>
+            </form>
+
+            <div id="output-card">
+                <div class="card-header">
+                    <div class="card-icon">🎓</div>
+                    <h2 id="card-name"></h2>
+                </div>
+                
+                <div class="pro-tip-section">
+                    <h3>Your Professional Insight</h3>
+                    <p id="pro-tip"></p>
+                </div>
+                
+                <div class="pro-tip-section mantra-section">
+                    <h3>Your Career Mantra</h3>
+                    <p id="graduate-mantra"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+       
+</body>
+</html>
