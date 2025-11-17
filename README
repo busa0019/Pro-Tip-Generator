@@ -1,94 +1,97 @@
 # Developer & Designer Graduation Mantra Generator
-<<<<<<< HEAD
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![License](https://img.shields.io/badge/license-open--source-blue)
-![Contributions
-Welcome](https://img.shields.io/badge/contributions-welcome-purple)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-purple)
 
-=======
->>>>>>> 7ed9d406a4c1c4c0fa52b1e2fbc29131d9bc74ec
-A beautiful web application that generates personalized professional
-mantras for developers and designers beginning their careers.
+A beautiful web application that generates personalized professional mantras for developers and designers beginning their careers.
 
 ## 🌟 Features
 
--   Personalized Mantras based on user input
--   Beautiful UI with modern styling and animations
--   Free Forever --- no API keys required
--   Reliable + offline-safe template fallback system
--   Responsive across mobile and desktop
+- Personalized mantras based on user input
+- Beautiful UI with modern styling and animations
+- Offline-safe template fallback system
+- Responsive across mobile and desktop
+- Free to use (see note below about optional model APIs)
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
--   Node.js (version 14+)
--   A modern web browser
+- Node.js (v14+)
+- A modern web browser
 
-## 🛠 Installation
+### Project layout (example)
 
-### 1. Clone or Download the Project
+```
+your-project/
+├── index.html
+├── style.css
+├── script.js
+└── mantra-backend/
+    ├── server.js
+    ├── package.json
+```
 
-    your-project/
-    ├── index.html
-    ├── style.css
-    ├── script.js
-    └── mantra-backend/
-        ├── server.js
-        ├── package.json
+### 1. Set up the backend
 
-### 2. Set Up the Backend
+From the `mantra-backend` directory:
 
-    cd mantra-backend
-    npm install
-    npm start
+```bash
+cd mantra-backend
+npm install
+npm start
+```
 
-Expected output: 🚀 Mantra server running on http://localhost:3001
+Expected output:
+```
+🚀 Mantra server running on http://localhost:3001
+```
 
-### 3. Launch the Frontend
+By default the backend listens on port 3001. You can change the port in `server.js` or via an environment variable if implemented.
 
-Open index.html directly in your browser\
-OR start a local server:
+### 2. Launch the frontend
 
-    python -m http.server 8000
+Open `index.html` in your browser, or serve it locally:
 
-Visit: http://localhost:8000
+```bash
+# from the frontend directory (or project root)
+python -m http.server 8000
+```
 
-### 4. How to Use the App
+Then visit: http://localhost:8000
 
-1.  Click "Create Your Mantra"
-2.  Enter:
-    -   Your name or nickname
-    -   Your biggest lesson
-    -   Your biggest fear
-3.  Click "Generate My Professional Mantra"
-4.  Receive Pro Tip + Career Mantra
+## 🛠 How to use
 
-## 🧩 Technical Overview
+1. Click "Create Your Mantra"
+2. Enter:
+   - Your name or nickname
+   - Your biggest lesson
+   - Your biggest fear
+3. Click "Generate My Professional Mantra"
+4. Receive a Pro Tip and Career Mantra
+
+## 🧩 Technical overview
 
 ### Frontend
-
--   HTML5
--   CSS3
--   JavaScript ES6+
--   Responsive design
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Responsive design and animations
 
 ### Backend
+- Node.js + Express
+- CORS
+- Optionally integrates with Hugging Face model APIs (see note)
+- Template fallback system so the app still works without external model access
 
--   Node.js
--   Express.js
--   CORS
--   Hugging Face API
--   Template fallback system
+Important: If you enable a hosted model (Hugging Face or similar), you will likely need an API key. The application should gracefully fall back to local templates when no external model is available.
 
 ## 🔧 API Endpoints
 
 ### POST /api/generate-mantra
-
-Request:
-
-``` json
+Request body:
+```json
 {
   "name": "string",
   "lesson": "string",
@@ -97,8 +100,7 @@ Request:
 ```
 
 Response:
-
-``` json
+```json
 {
   "proTip": "string",
   "mantra": "string"
@@ -106,51 +108,44 @@ Response:
 ```
 
 ### GET /health
+Returns a simple server health check.
 
-Server health check.
+## ⚠️ Notes about external models (Hugging Face etc.)
+- If you choose to use Hugging Face APIs, configure a key (for example HUGGING_FACE_API_KEY) in your backend environment.
+- Ensure you do not commit secrets to the repo. Use environment variables or a secrets manager.
+- The backend should fall back to local templates if the external API fails or is not configured.
 
-## 🌈 Color Scheme
-
--   Primary: #5e72e4
--   Secondary: #2dce89
--   Accent: #fb6340
--   Background: #f8f9fe
--   Text: #32325d
+## 🌈 Color scheme
+- Primary: #5e72e4
+- Secondary: #2dce89
+- Accent: #fb6340
+- Background: #f8f9fe
+- Text: #32325d
 
 ## 🐛 Troubleshooting
-
--   Ensure Node.js is installed
--   Reinstall dependencies: `npm install`
--   Backend must run on port 3001
--   Hugging Face API errors fall back automatically
--   Ensure required fields are filled
+- Ensure Node.js is installed
+- Reinstall dependencies: `npm install` (run in the backend directory for server deps)
+- Backend must run on port 3001 by default (or update the frontend `API_URL`)
+- If using external model APIs, verify keys and network access
+- Required form fields must be filled in the UI
 
 ## 🚀 Deployment
-
-### Local
-
-    cd mantra-backend && npm start
-
-Open index.html or run a local server.
-
-### Production
-
--   Frontend: Netlify, Vercel, GitHub Pages
--   Backend: Heroku, Railway, Render
--   Update API_URL in script.js
+- Frontend: Netlify, Vercel, GitHub Pages (serve static files)
+- Backend: Heroku, Railway, Render, or similar
+- Update `API_URL` in `script.js` to point to your deployed backend endpoint
 
 ## 📝 License
-
-Open source.
+This project is open source. Add a LICENSE file (e.g., MIT) to make licensing explicit.
 
 ## 🤝 Contributing
+Contributions are welcome! Please:
+1. Open an issue for significant changes or features
+2. Create a branch, make changes, and open a PR
+3. Include a clear description and testing steps
 
-Contributions are welcome!
-
-## 🎯 Future Enhancements
-
--   Export mantras as images
--   Save favorites
--   Multi-language support
--   More templates
--   User accounts
+## 🎯 Future enhancements
+- Export mantras as images
+- Save favorites
+- Multi-language support
+- More templates
+- User accounts
